@@ -21,56 +21,56 @@ This training covers the majority of the content in the first volume of my serie
   - Agenda
 
 - Module 1: PyTorch: tensors, tensors, tensors 
- - Introducing a simple and familiar example: linear regression
- - Generating synthetic data
- - Tensors: what they are and how to create them
- - CUDA: GPU vs CPU tensors
- - Parameters: tensors meet gradients
- - Quiz #1
- - Exercise #1
+  - Introducing a simple and familiar example: linear regression
+  - Generating synthetic data
+  - Tensors: what they are and how to create them
+  - CUDA: GPU vs CPU tensors
+  - Parameters: tensors meet gradients
+  - Quiz #1
+  - Exercise #1
 
 - Module 2: Gradient Descent in Five Easy Steps
- - Step 0: initializing parameters
- - Step 1: making predictions in the forward pass
- - Step 2: computing the loss, or “how bad is my model?”
- - Loss surface
- - Step 3: computing gradients, or “how to minimize the loss?”
- - Step 4: updating parameters
- - Exercise #2.1
- - Learning rate, the most important hyper-parameter
- - Exercise #2.2
- - Gradient Descent and the importance of feature scaling
- - Step 5: Rinse and repeat
- - Quiz #2
- - Exercise #2.3
+  - Step 0: initializing parameters
+  - Step 1: making predictions in the forward pass
+  - Step 2: computing the loss, or “how bad is my model?”
+  - Loss surface
+  - Step 3: computing gradients, or “how to minimize the loss?”
+  - Step 4: updating parameters
+  - Exercise #2.1
+  - Learning rate, the most important hyper-parameter
+  - Exercise #2.2
+  - Gradient Descent and the importance of feature scaling
+  - Step 5: Rinse and repeat
+  - Quiz #2
+  - Exercise #2.3
 
 - Module 3: Autograd, your companion for all your gradient needs!
- - Computing gradients automatically with the backward method
- - Dynamic Computation Graph: what is that?
- - Optimizers: updating parameters, the PyTorch way
- - Loss functions in PyTorch
- - Quiz #3
- - Exercise #3
+  - Computing gradients automatically with the backward method
+  - Dynamic Computation Graph: what is that?
+  - Optimizers: updating parameters, the PyTorch way
+  - Loss functions in PyTorch
+  - Quiz #3
+  - Exercise #3
 
 - Module 4: Building a Model in PyTorch 
- - Your first custom model in PyTorch
- - Peeking inside a model with state dictionaries
- - The importance of setting a model to training mode
- - Nested models, layers, and sequential models
- - Organizing our code: the training step
- - Quiz #4
- - Exercise #4
+  - Your first custom model in PyTorch
+  - Peeking inside a model with state dictionaries
+  - The importance of setting a model to training mode
+  - Nested models, layers, and sequential models
+  - Organizing our code: the training step
+  - Quiz #4
+  - Exercise #4
 
 - Module 5: Datasets and data loaders    
- - Your first custom dataset in PyTorch   
- - Data loaders and mini-batches    
- - Evaluation phase: setting up the stage   
- - Taking a break: saving and loading models
- - Quiz #5
- - Exercise #5
- - The StepByStep class
+  - Your first custom dataset in PyTorch   
+  - Data loaders and mini-batches    
+  - Evaluation phase: setting up the stage   
+  - Taking a break: saving and loading models
+  - Quiz #5
+  - Exercise #5
+  - The StepByStep class
 
- - Bonus Module: Are my data points separable? (if time allows)
+- Bonus Module: Are my data points separable? (if time allows)
 
 ## Setup Guide (Local Installation)
 
