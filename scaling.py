@@ -75,7 +75,7 @@ def data():
     np.random.seed(42)
     orig_x1 = np.linspace(-1, 3, 1000) + np.random.randn(1000)
     orig_x2 = np.linspace(20, 50, 1000) + np.random.randn(1000)
-    orig_y = 1 + 2 * orig_x1 + 0.05 * orig_x2 + 2 * np.random.randn(1000)
+    orig_y = 0 + 2 * orig_x1 + 0.05 * orig_x2 + 2 * np.random.randn(1000)
 
     shuffled = list(range(1000))
     np.random.shuffle(shuffled)
@@ -97,18 +97,18 @@ class plotGradientDescent(object):
 
     def fit(self):
         linr = LinearRegression(fit_intercept=False)
-        linr.fit(np.concatenate([np.ones_like(self.x1), self.x1, self.x2], axis=1), self.y)
+        linr.fit(np.concatenate([self.x1, self.x2], axis=1), self.y)
 
         scaled_linr = LinearRegression(fit_intercept=False)
         self.scaled_x1, self.scaled_x2 = self.scale()
-        scaled_linr.fit(np.concatenate([np.ones_like(self.scaled_x1), self.scaled_x1, self.scaled_x2], axis=1), self.y)
+        scaled_linr.fit(np.concatenate([self.scaled_x1, self.scaled_x2], axis=1), self.y)
 
-        self.grid = build_2d_grid(np.array([-3, 3]) + linr.coef_[1],
-                                  np.array([3, -3]) + linr.coef_[2],
+        self.grid = build_2d_grid(np.array([-3, 3]) + linr.coef_[0],
+                                  np.array([3, -3]) + linr.coef_[1],
                                   n_lines=200, n_points=200)
 
-        self.scaled_grid = build_2d_grid(np.array([-3, 3]) + scaled_linr.coef_[1],
-                                  np.array([3, -3]) + scaled_linr.coef_[2],
+        self.scaled_grid = build_2d_grid(np.array([-3, 3]) + scaled_linr.coef_[0],
+                                  np.array([3, -3]) + scaled_linr.coef_[1],
                                   n_lines=200, n_points=200)
 
         losses = self.loss_surface(self.grid, self.x1, self.x2, self.y)
@@ -165,15 +165,15 @@ class plotGradientDescent(object):
             losses = self.scaled_losses
             x1 = self.scaled_x1.ravel()
             x2 = self.scaled_x2.ravel()
-            m1min = self.scaled_linr.coef_[1]
-            m2min = self.scaled_linr.coef_[2]
+            m1min = self.scaled_linr.coef_[0]
+            m2min = self.scaled_linr.coef_[1]
         else:
             grid = self.grid
             losses = self.losses
             x1 = self.x1.ravel()
             x2 = self.x2.ravel()
-            m1min = self.linr.coef_[1]
-            m2min = self.linr.coef_[2]
+            m1min = self.linr.coef_[0]
+            m2min = self.linr.coef_[1]
         y = self.y.ravel()
 
         N = len(y)
@@ -228,16 +228,16 @@ def build_figure(gd_obj):
                                  y=gd_obj.scaled_grid[0, :, 1],
                                  z=gd_obj.scaled_losses), 1, 1)
     fig.append_trace(go.Scatter(x=[], y=[], mode='lines'), 1, 1)
-    fig.append_trace(go.Scatter(x=[gd_obj.scaled_linr.coef_[1]],
-                                y=[gd_obj.scaled_linr.coef_[2]],
+    fig.append_trace(go.Scatter(x=[gd_obj.scaled_linr.coef_[0]],
+                                y=[gd_obj.scaled_linr.coef_[1]],
                                 mode='markers', marker={'symbol': 'star'}), 1, 1)
 
     #f = go.FigureWidget(fig)
     f = go.Figure(fig)
 
     f['layout'].update(title='Gradient Descent')
-    f['layout']['xaxis'].update(range=np.array([-3, 3]) + gd_obj.scaled_linr.coef_[1])
-    f['layout']['yaxis'].update(range=np.array([-3, 3]) + gd_obj.scaled_linr.coef_[2])
+    f['layout']['xaxis'].update(range=np.array([-3, 3]) + gd_obj.scaled_linr.coef_[0])
+    f['layout']['yaxis'].update(range=np.array([-3, 3]) + gd_obj.scaled_linr.coef_[1])
     f['layout']['autosize'] = False
     f['layout']['width'] = 600
     f['layout']['height'] = 600
@@ -245,8 +245,8 @@ def build_figure(gd_obj):
 
     names = ['contour', 'path', 'minimum']
 
-    m1range = (np.array([-3, 3]) + gd_obj.scaled_linr.coef_[1])
-    m2range = (np.array([-3, 3]) + gd_obj.scaled_linr.coef_[2])
+    m1range = (np.array([-3, 3]) + gd_obj.scaled_linr.coef_[0])
+    m2range = (np.array([-3, 3]) + gd_obj.scaled_linr.coef_[1])
     m1range = [np.ceil(m1range[0]), np.floor(m1range[1])]
     m2range = [np.ceil(m2range[0]), np.floor(m2range[1])]
 
