@@ -15,12 +15,12 @@ This training covers the majority of the content in the first volume of my serie
 
 ## Course Outline
 
-- Module 0: Introduction
+- [Module 0: Introduction](https://colab.research.google.com/github/dvgodoy/PyTorch101_AI_Plus/blob/main/Module0.ipynb)
   - Introduction
   - Motivation
   - Agenda
 
-- Module 1: PyTorch: tensors, tensors, tensors 
+- [Module 1: PyTorch: tensors, tensors, tensors](https://colab.research.google.com/github/dvgodoy/PyTorch101_AI_Plus/blob/main/Module1.ipynb)
   - Introducing a simple and familiar example: linear regression
   - Generating synthetic data
   - Tensors: what they are and how to create them
@@ -29,7 +29,7 @@ This training covers the majority of the content in the first volume of my serie
   - Quiz #1
   - Exercise #1
 
-- Module 2: Gradient Descent in Five Easy Steps
+- [Module 2: Gradient Descent in Five Easy Steps](https://colab.research.google.com/github/dvgodoy/PyTorch101_AI_Plus/blob/main/Module2.ipynb)
   - Step 0: initializing parameters
   - Step 1: making predictions in the forward pass
   - Step 2: computing the loss, or “how bad is my model?”
@@ -44,7 +44,7 @@ This training covers the majority of the content in the first volume of my serie
   - Quiz #2
   - Exercise #2.3
 
-- Module 3: Autograd, your companion for all your gradient needs!
+- [Module 3: Autograd, your companion for all your gradient needs!](https://colab.research.google.com/github/dvgodoy/PyTorch101_AI_Plus/blob/main/Module3.ipynb)
   - Computing gradients automatically with the backward method
   - Dynamic Computation Graph: what is that?
   - Optimizers: updating parameters, the PyTorch way
@@ -52,7 +52,7 @@ This training covers the majority of the content in the first volume of my serie
   - Quiz #3
   - Exercise #3
 
-- Module 4: Building a Model in PyTorch 
+- [Module 4: Building a Model in PyTorch](https://colab.research.google.com/github/dvgodoy/PyTorch101_AI_Plus/blob/main/Module4.ipynb)
   - Your first custom model in PyTorch
   - Peeking inside a model with state dictionaries
   - The importance of setting a model to training mode
@@ -61,7 +61,7 @@ This training covers the majority of the content in the first volume of my serie
   - Quiz #4
   - Exercise #4
 
-- Module 5: Datasets and data loaders    
+- [Module 5: Datasets and data loaders]](https://colab.research.google.com/github/dvgodoy/PyTorch101_AI_Plus/blob/main/Module5.ipynb)
   - Your first custom dataset in PyTorch   
   - Data loaders and mini-batches    
   - Evaluation phase: setting up the stage   
@@ -70,7 +70,7 @@ This training covers the majority of the content in the first volume of my serie
   - Exercise #5
   - The StepByStep class
 
-- Bonus Module: Are my data points separable? (if time allows)
+- [Bonus Module: Are my data points separable? (if time allows)](https://colab.research.google.com/github/dvgodoy/PyTorch101_AI_Plus/blob/main/ModuleBonus.ipynb)
 
 ## Setup Guide (Local Installation)
 
