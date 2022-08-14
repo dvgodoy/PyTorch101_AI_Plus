@@ -104,12 +104,12 @@ def figure4(x_train, y_train, b, w, bs, ws, all_losses):
 
     bidx, widx, _, _ = find_index(b_minimum, w_minimum, bs, ws)
     ax1.scatter(b_minimum, w_minimum, all_losses[bidx, widx], c='k')
-    ax1.text(-.3, 2.5, all_losses[bidx, widx], 'Minimum', zdir=(1, 0, 0))
+    ax1.text(-.3, 2.5, all_losses[widx, bidx], 'Minimum', zdir=(1, 0, 0))
     # Random start
     bidx, widx, _, _ = find_index(b, w, bs, ws)
-    ax1.scatter(b, w, all_losses[bidx, widx], c='k')
+    ax1.scatter(b, w, all_losses[widx, bidx], c='k')
     # Annotations
-    ax1.text(-.2, -1.5, all_losses[bidx, widx], 'Random\n Start', zdir=(1, 0, 0))
+    ax1.text(-.2, -1.5, all_losses[widx, bidx], 'Random\n Start', zdir=(1, 0, 0))
 
     ax1.view_init(40, 260)
     
