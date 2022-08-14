@@ -61,7 +61,7 @@ This training covers the majority of the content in the first volume of my serie
   - Quiz #4
   - Exercise #4
 
-- [Module 5: Datasets and data loaders]](https://colab.research.google.com/github/dvgodoy/PyTorch101_AI_Plus/blob/main/Module5.ipynb)
+- [Module 5: Datasets and data loaders](https://colab.research.google.com/github/dvgodoy/PyTorch101_AI_Plus/blob/main/Module5.ipynb)
   - Your first custom dataset in PyTorch   
   - Data loaders and mini-batches    
   - Evaluation phase: setting up the stage   
@@ -71,6 +71,8 @@ This training covers the majority of the content in the first volume of my serie
   - The StepByStep class
 
 - [Bonus Module: Are my data points separable? (if time allows)](https://colab.research.google.com/github/dvgodoy/PyTorch101_AI_Plus/blob/main/ModuleBonus.ipynb)
+
+- [Exercises](https://colab.research.google.com/github/dvgodoy/PyTorch101_AI_Plus/blob/main/Exercises.ipynb)
 
 ## Setup Guide (Local Installation)
 
