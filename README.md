@@ -88,6 +88,6 @@ If you'd like to use a local environment, please follow these steps (assuming yo
 
 - Install torchviz: `pip install torchviz`
 
-- Clone this repo: `git clone https://github.com/dvgodoy/PyTorch101_ODSC_Europe2022.git`
+- Clone this repo: `git clone https://github.com/dvgodoy/PyTorch101_AI_Plus.git`
 
 - Start Jupyter: `jupyter notebook`
